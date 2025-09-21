@@ -19,6 +19,9 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
     testImplementation 'com.codeborne:selenide:6.19.1'
     implementation 'com.github.javafaker:javafaker:1.0.2'
+    testImplementation 'org.projectlombok:lombok:1.18.36'     // зависимость добавляется только для тестов
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.36' // обеспечивает поддержку аннотаций Lombok на этапе запуска тестов
+    testImplementation 'org.slf4j:slf4j-simple:1.7.32' // зависимость необходимая для упрощенного логирования ошибок
 }
 
 test {
