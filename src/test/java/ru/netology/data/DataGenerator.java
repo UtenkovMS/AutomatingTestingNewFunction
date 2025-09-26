@@ -26,7 +26,7 @@ public class DataGenerator {
         return date;
     }
 
-    public static String generateCity(Faker faker) {
+    public static String generateCity() {
         // String city = faker.address().city(); // Генерация названия города через фейкер
 
         // Создаем переменную random класса Random, который позволяет использовать методы для генерации случайных чисел
@@ -41,7 +41,8 @@ public class DataGenerator {
 
     public static String generateName(Faker faker) {
         // String name = faker.name().fullName(); // Генерация имен и фамилий через фейкер, у данного метода есть
-        // недостаток, нельзя контролировать порядок написания имени и фамилии поэтому будем использовать другой метод
+        // недостаток, нельзя контролировать порядок написания имени и фамилии
+        // поэтому будем использовать метод приведенный ниже.
 
         // В данном методе мы сначала генерируем фамилию faker.name().lastName()
         String name = faker.name().lastName();
@@ -77,7 +78,7 @@ public class DataGenerator {
 
             // Вызывается метод generateCity() с объектом faker в качестве аргумента.
             // Метод генерирует случайное название города, которое сохраняется в переменной city.
-            String city = generateCity(faker);
+            String city = generateCity();
             // Вызывается метод generateName() с объектом faker в качестве аргумента.
             // Метод генерирует случайное название города, которое сохраняется в переменной name.
             String name = generateName(faker);
